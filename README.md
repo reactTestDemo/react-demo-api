@@ -1,24 +1,27 @@
-# README
+# React Demo API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Development Setup
 
-Things you may want to cover:
+1. Clone the repo from Github:
 
-* Ruby version
+        $ git clone https://github.com/reactTestDemo/react-demo-api.git
 
-* System dependencies
+2. Ensure you have the correct ruby version via rbenv or RVM as defined in .ruby-version
 
-* Configuration
+3. Bundle the gems:
 
-* Database creation
+        $ gem install bundler
+        $ bundle install
 
-* Database initialization
+4. Create migration and run seed.rb file
 
-* How to run the test suite
+        $ bundle exec rake db:create
+        $ bundle exec rake db:migrate
+        $ bundle exec rake db:seed
 
-* Services (job queues, cache servers, search engines, etc.)
+5. Application must be run `port 3010`
+        $ bundle exec rails s -p 3010
 
-* Deployment instructions
-
-* ...
+## Admin User: must need to execute rake db:seed
+      email: admin@react.com
+      password: password
